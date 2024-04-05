@@ -9,4 +9,3 @@ sarynes,Rynes,Sophia
 sroslee,Roslee,Nuha
 atoutant,Toutant,Aurora
 avsiegel,Siegel,Lexi
-avsiegel,Siegel,Lexi
