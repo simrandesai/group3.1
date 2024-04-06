@@ -1,0 +1,20 @@
+# Run parallel jobs to process each of the partial files.
+
+log    =    log/$(Cluster)_$(file).log
+error  =  error/$(Cluster)_$(file).err
+output = output/$(Cluster)_$(file).out
+
+universe = vanilla
+
+executable = job.sh
+arguments = $(file)
+
+should_transfer_files = YES
+when_to_transfer_output = ON_EXIT
+transfer_input_files = $(file)
+
+request_cpus = 1
+request_memory = 1GB
+request_disk = 1MB
+
+queue file from inputFileList
