@@ -7,8 +7,8 @@ fi
 
 file=$1
 
-output_file="${input_file}.processed"
+output_file="${file}.processed"
 
-tr '[:upper:]' '[:lower:]' < $file | sed 's/[[:punct:]]//g' | tr -s '[:blank:]' '\n' |grep -vE '^\s*$' | sort > $output_file
+tr '[:upper:]' '[:lower:]' < "$file" | sed 's/[[:punct:]]//g' | tr -s '[:blank:]' '\n' | grep -vE '^\s*$' | sort > "$output_file"
 
 echo "Processed file: $output_file"
