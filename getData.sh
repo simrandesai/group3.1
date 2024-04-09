@@ -1,7 +1,7 @@
 #!/bin/bash
 
 wget -O shakespeare.tar https://pages.stat.wisc.edu/~jgillett/DSCP/CHTC/wordCounting/shakespeare.tar
-tar -xf shakespeare.tar
+tar -xvf shakespeare.tar
 
 find shakespeare/ -type f -not -name "README" -exec cat {} + > shakespeare_all.txt
 
@@ -10,3 +10,4 @@ find shakespeare/ -type f -not -name "README" -exec cat {} + > shakespeare_all.t
 
 split -n l/5 -a 2 -d shakespeare_all.txt file
 
+ls file0* > inputFileList
