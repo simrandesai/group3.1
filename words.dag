@@ -1,0 +1,7 @@
+
+job 1 job.sub
+
+script pre 1 getData.sh
+script post 1 post.sh
+
+#countsofwords only left
